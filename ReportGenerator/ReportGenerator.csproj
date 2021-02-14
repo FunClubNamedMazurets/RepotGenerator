@@ -59,6 +59,7 @@
     <Compile Include="Data\Contexts\ReportContext.cs" />
     <Compile Include="Data\Entities\BaseEntity.cs" />
     <Compile Include="Data\Entities\Dodatoc2.cs" />
+    <Compile Include="Data\Entities\FormaZvt.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,10 +68,12 @@
     </Compile>
     <Compile Include="Generators\BaseGenerator.cs" />
     <Compile Include="Generators\Dodatoc2Generator.cs" />
+    <Compile Include="Generators\FormaZvtGenerator.cs" />
     <Compile Include="Generators\IGenerator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Dodatoc2Service.cs" />
+    <Compile Include="Services\FormaZvtService.cs" />
     <Compile Include="Services\IBaseService.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
