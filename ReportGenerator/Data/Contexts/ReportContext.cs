@@ -12,8 +12,6 @@ namespace ReportGenerator.Data.Contexts
     {
         public DbSet<Dodatoc2> Dodatoc2s { get; set; }
 
-        public DbSet<FormaZvt> FormaZvts { get; set; }
-
         public ReportContext() : base()
         {
 
