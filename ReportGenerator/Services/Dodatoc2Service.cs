@@ -8,29 +8,50 @@ using System.Threading.Tasks;
 
 namespace ReportGenerator.Services
 {
-    public class Dodatoc2Service
+    public class Dodatoc2Service : IBaseService<Dodatoc2>
     {
-        private ReportContext reportContext;
+        private ReportContext _reportContext;
 
         public Dodatoc2Service()
         {
-            reportContext = new ReportContext();
+            _reportContext = new ReportContext();
         }
 
         public Dodatoc2 GetById(int id) 
         {
-            return reportContext.Dodatoc2s.Where(x => x.Id == id).First();
+            return _reportContext.Dodatoc2s.Where(x => x.Id == id).First();
         }
 
-        public List<Dodatoc2> GetAll()
+        public IList<Dodatoc2> GetAll()
         {
-            return reportContext.Dodatoc2s.ToList();
+            return _reportContext.Dodatoc2s.ToList();
         }
 
         public void Insert(Dodatoc2 entity)
         {
-            reportContext.Dodatoc2s.Add(entity);
-            reportContext.SaveChanges();
+            _reportContext.Dodatoc2s.Add(entity);
+            _reportContext.SaveChanges();
+        }
+
+        public void Update(Dodatoc2 entity)
+        {
+            var dodatoc2 = _reportContext.Dodatoc2s.First(x => x.Id == entity.Id);
+            if (dodatoc2 != null)
+            {
+                dodatoc2 = entity;
+                _reportContext.SaveChanges();
+            }            
+        }
+
+        public void Delete(int id)
+        {
+            var dodatoc2 = _reportContext.Dodatoc2s.First(x => x.Id == id);
+
+            if (dodatoc2 != null)
+            {
+                _reportContext.Dodatoc2s.Remove(dodatoc2);
+                _reportContext.SaveChanges();
+            }                    
         }
     }
 }

@@ -60,6 +60,7 @@
     <Compile Include="Data\Entities\BaseEntity.cs" />
     <Compile Include="Data\Entities\Dodatoc2.cs" />
     <Compile Include="Main.cs">
+    <Compile Include="Data\Entities\Dodatoc4.cs" />
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main.Designer.cs">
@@ -67,6 +68,7 @@
     </Compile>
     <Compile Include="Generators\BaseGenerator.cs" />
     <Compile Include="Generators\Dodatoc2Generator.cs" />
+    <Compile Include="Generators\Dodatoc4Generator.cs" />
     <Compile Include="Generators\IGenerator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,6 +99,8 @@
     </Compile>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="Services\Dodatoc4Service.cs" />
+    <Compile Include="Services\IBaseService.cs" />
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
